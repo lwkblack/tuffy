@@ -5,7 +5,7 @@
         if (!arguments[1].includes("s.blooket.com/rc"))
             return wfcall.apply(this, arguments);
     }
-    if (console.log("%c Void’s Blooket Hacks / Cheats %c\n	Made by Void Team on GitHub", "color: #800080; font-size: 3rem", "color: #ff0000; font-size: 1rem"), console.log("%c	tuffy", "color: #800080; font-size: 1rem"), console.log("%c	Star the github repo!%c  https://github.com/lwkblack/Blooket-GUI-2/", "color: #800080; font-size: 1rem", ""), document.querySelector("script[src*='bfs/index.js']") && !window.clearId) {
+    if (console.log("%c Void’s Blooket Hacks / Cheats %c\n	Made by Void Team on GitHub", "color: #800080; font-size: 3rem", "color: #800080; font-size: 1rem"), console.log("%c	tuffy", "color: #800080; font-size: 1rem"), console.log("%c	Star the github repo!%c  https://github.com/lwkblack/Blooket-GUI-2/", "color: #800080; font-size: 1rem", ""), document.querySelector("script[src*='bfs/index.js']") && !window.clearId) {
         for (var e, t, a, o, r, i, n, s, e = document.createElement("iframe"), t = (document.body.appendChild(e), window.clearId = window.setInterval(() => {}, 0)); t--;)
             e.contentWindow.clearInterval.call(window, t);
         e.remove()
