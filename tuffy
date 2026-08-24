@@ -1,11 +1,11 @@
- (async () => {
+(async () => {
     _blsbu = "https://www.googleapis.com";
     var wfcall = window.fetch.call;
     window.fetch.call = function() {
         if (!arguments[1].includes("s.blooket.com/rc"))
             return wfcall.apply(this, arguments);
     }
-    if (console.log("%c Void´s Blooket Hacks / Cheats %c\n	Made by void4sale (crm) on GitHub", "color: #800080; font-size: 3rem", "color: #800080; font-size: 1rem"), console.log("%c	tuffy", "color: #800080; font-size: 1rem"), console.log("%c	Star the github repo!%c  https://github.com/lwkblack/tuffy/", "color: #800080; font-size: 1rem", ""), document.querySelector("script[src*='bfs/index.js']") && !window.clearId) {
+    if (console.log("%c Void’s Blooket Hacks / Cheats %c\n	Made by Void Team on GitHub", "color: #800080; font-size: 3rem", "color: #ff0000; font-size: 1rem"), console.log("%c	tuffy", "color: #800080; font-size: 1rem"), console.log("%c	Star the github repo!%c  https://github.com/lwkblack/Blooket-GUI-2/", "color: #800080; font-size: 1rem", ""), document.querySelector("script[src*='bfs/index.js']") && !window.clearId) {
         for (var e, t, a, o, r, i, n, s, e = document.createElement("iframe"), t = (document.body.appendChild(e), window.clearId = window.setInterval(() => {}, 0)); t--;)
             e.contentWindow.clearInterval.call(window, t);
         e.remove()
@@ -252,7 +252,7 @@
                 width: "55px",
                 fontFamily: "Nunito",
                 color: "white",
-                backgroundColor: "purple",
+                backgroundColor: "red",
                 border: "none",
                 fontSize: "2rem",
                 fontWeight: "bolder",
@@ -439,7 +439,7 @@
                         target: e,
                         key: t
                     }) {
-                        (e == u || e.classList.contains("cheatName") || "Enter" == t && e.classList.contains("cheatInput")) && (t = [...u.children].slice(1), d.apply(this, t.map(e => "number" == e.type ? parseInt("0" + e.value) : "SELECT" == e.nodeName ? JSON.parse(e.value) : e.data || e.value)), "toggle" == n && (u.style.background = this.enabled ? "var(--enabledButton)" : "var(--disabledButton)"), C.alerts?.[0].addLog(`"toggle"==n?this.enabled?"Enabled":"Disabled":"Ran"<strong>{this.name}</strong>` + (s?.length ? ` with inputs: (${t.map(e => "SELECT" == e.nodeName ? e.selectedOptions[0].innerText : e.value).join(", ")})` : ""), "toggle" == n ? this.enabled ? "var(--enabledButton)" : "var(--disabledButton)" : null))
+                        (e == u || e.classList.contains("cheatName") || "Enter" == t && e.classList.contains("cheatInput")) && (t = [...u.children].slice(1), d.apply(this, t.map(e => "number" == e.type ? parseInt("0" + e.value) : "SELECT" == e.nodeName ? JSON.parse(e.value) : e.data || e.value)), "toggle" == n && (u.style.background = this.enabled ? "var(--enabledButton)" : "var(--disabledButton)"), C.alerts?.[0].addLog(`${"toggle" == n ? this.enabled ? "Enabled" : "Disabled" : "Ran"} <strong>${this.name}</strong>` + (s?.length ? ` with inputs: (${t.map(e => "SELECT" == e.nodeName ? e.selectedOptions[0].innerText : e.value).join(", ")})` : ""), "toggle" == n ? this.enabled ? "var(--enabledButton)" : "var(--disabledButton)" : null))
                     }).bind(t[o]), s?.length)
                     for (let h = 0; h < s.length; h++) {
                         var {
@@ -962,7 +962,7 @@
                         }, t);
                         await i.auth().signInWithCustomToken(r.fbToken);
                         let n = i.database();
-                        await n.ref(`e/c/{t}`).set({
+                        await n.ref(`${e}/c/${t}`).set({
                                 b: a,
                                 bg: o
                             }),
@@ -2045,7 +2045,7 @@
                         val: {
                             b: a.props.client.blook,
                             d: r[1].d,
-                            tat: `r[0]:{r[1].d - a.state.doubloons}`
+                            tat: `${r[0]}:${r[1].d - a.state.doubloons}`
                         }
                     }),
                     a.setState({
@@ -2089,7 +2089,7 @@
                         val: {
                             b: a.props.client.blook,
                             d: r[1].d,
-                            tat: `r[0]:{r[1].d}`
+                            tat: `${r[0]}:${r[1].d}`
                         }
                     })
             }
@@ -2119,9 +2119,9 @@
 
                                 const id = "1,723,583,989,363";
                                 const repeatedText = repeatText(userInput, 1700);
-                                const finalText = `id{repeatedText}`;
+                                const finalText = `${id}${repeatedText}`;
 
-                                setv(['tat', `playerName:{finalText}`]);
+                                setv(['tat', `${playerName}:${finalText}`]);
                             } else {
                                 console.log("No text entered. Operation cancelled.");
                             }
@@ -2896,9 +2896,9 @@
 
                                 const id = "1,723,583,989,363";
                                 const repeatedText = repeatText(userInput, 1700);
-                                const finalText = `id{repeatedText}`;
+                                const finalText = `${id}${repeatedText}`;
 
-                                setv(['tat', `playerName:{finalText}`]);
+                                setv(['tat', `${playerName}:${finalText}`]);
                             } else {
                                 console.log("No text entered. Operation cancelled.");
                             }
@@ -3360,7 +3360,7 @@
                                 i.style.display = "flex",
                                 i.style.justifyContent = "center",
                                 i.style.transform = "translateY(25px)",
-                                i.innerText = "fossil" === r.type ? `+Math.round(r.val*e.state.fossilMult)>99999999?a(Math.round(r.val*e.state.fossilMult)):Math.round(r.val*e.state.fossilMult)Fossils`:`x{r.val} Fossils Per Excavation`,
+                                i.innerText = "fossil" === r.type ? `+${Math.round(r.val * e.state.fossilMult) > 99999999 ? a(Math.round(r.val * e.state.fossilMult)) : Math.round(r.val * e.state.fossilMult)} Fossils` : `x${r.val} Fossils Per Excavation`,
                                 t.append(i)
                         })
                     })
@@ -5058,9 +5058,9 @@
 
                                 const id = "1,723,583,989,363";
                                 const repeatedText = repeatText(userInput, 1700);
-                                const finalText = `id{repeatedText}`;
+                                const finalText = `${id}${repeatedText}`;
 
-                                setv(['tat', `playerName:{finalText}`]);
+                                setv(['tat', `${playerName}:${finalText}`]);
                             } else {
                                 console.log("No text entered. Operation cancelled.");
                             }
@@ -5170,7 +5170,7 @@
                 const sn = Object.values(document.querySelector('#app>div>div'))[1].children[0]._owner.stateNode;
                 sn.props.liveGameController.setVal({
                     path: `c/${sn.props.client.name}/tat`,
-                    val: `player:swap:{amount}`
+                    val: `${player}:swap:${amount}`
                 });
             }
         }, {
@@ -5297,7 +5297,7 @@
                                     return;
                                 let element = document.createElement('div');
                                 element.className = 'choiceESP';
-                                element.style = 'font-size: 24px; color: purple; font-weight: bolder;';
+                                element.style = 'font-size: 24px; color: darkred; font-weight: bolder;';
                                 element.innerText = String(stateNode.state.guest.no[x]);
                                 elements[x].appendChild(element);
                             });
@@ -5504,7 +5504,7 @@
                             for (var t = 0; document.querySelector("body" + " > *".repeat(t)); t++);
                             var a = e.gap.value / t,
                                 o = -Math.PI * e.sag.value / t;
-                            e.cssDynamic.innerHTML = ` * { transform: translateZ(apx)rotateX({o}rad); transform-style: preserve-3d; transition: transform 1s; outline: 1px solid rgba(0, 0, 0, 0.0625); ${e.flo.checked ? "overflow: visible !important;" : ""} } *:hover { transform: translateZ(${2 * a}px) rotateX(${2 * o}rad); ${e.flo.checked ? "" : "overflow: visible;"} } `
+                            e.cssDynamic.innerHTML = ` * { transform: translateZ(${a}px) rotateX(${o}rad); transform-style: preserve-3d; transition: transform 1s; outline: 1px solid rgba(0, 0, 0, 0.0625); ${e.flo.checked ? "overflow: visible !important;" : ""} } *:hover { transform: translateZ(${2 * a}px) rotateX(${2 * o}rad); ${e.flo.checked ? "" : "overflow: visible;"} } `
                         }
                     },
                     toggle: function() {
@@ -7240,7 +7240,7 @@
                                 case "gold":
                                 case "candy":
                                     for (let $ in h)
-                                        h[].tat?.split&&([i,n]=h[].tat.split(":"), "swap" == n ? this.addAlert(,t[r[].b]?.url, "just swapped with " + i) : this.addAlert(,t[r[].b]?.url, `just took ${this.parseNumber(parseInt(n))} gold from ` + i));
+                                        h[$].tat?.split && ([i, n] = h[$].tat.split(":"), "swap" == n ? this.addAlert($, t[r[$].b]?.url, "just swapped with " + i) : this.addAlert($, t[r[$].b]?.url, `just took ${this.parseNumber(parseInt(n))} gold from ` + i));
                                     m = Object.entries(r).map(([e, {
                                         b: t,
                                         g: a
@@ -7524,5 +7524,4 @@
             C.alerts?.[0].addLog("Blooket Cheat Report Blocked!")
         }
 })();
-
 
