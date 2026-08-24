@@ -37,21 +37,21 @@
         data: null,
         setItem(e, t) {
             return e.split(".").reduce((e, a, o, r) => (e[a] = (e[a] ? e[a] : {}), ++o == r.length && (e[a] = t), e[a]), this.data),
-                localStorage.setItem("crmGUISettings", JSON.stringify(this.data)),
+                localStorage.setItem("VoidGUISettings", JSON.stringify(this.data)),
                 this.data
         },
         deleteItem(e) {
             return e.split(".").reduce((e, t, a, o) => (++a == o.length && delete e[t], e[t]), this.data),
-                localStorage.setItem("crmGUISettings", JSON.stringify(this.data)),
+                localStorage.setItem("VoidGUISettings", JSON.stringify(this.data)),
                 this.data
         },
         setData(e) {
             this.data = e,
-                localStorage.setItem("crmGUISettings", JSON.stringify(this.data))
+                localStorage.setItem("VoidGUISettings", JSON.stringify(this.data))
         }
     };
     try {
-        for (let d of (c.data = JSON.parse(localStorage.getItem("crmGUISettings") || "{}"), ["backgroundColor", "cheatList", "contentBackground", "defaultButton", "disabledButton", "enabledButton", "infoColor", "inputColor", "textColor"]))
+        for (let d of (c.data = JSON.parse(localStorage.getItem("VoidGUISettings") || "{}"), ["backgroundColor", "cheatList", "contentBackground", "defaultButton", "disabledButton", "enabledButton", "infoColor", "inputColor", "textColor"]))
             c.data[d] && (c.setItem("theme." + d, c.data[d]), c.deleteItem(d))
     } catch {
         c.setData({})
@@ -66,7 +66,7 @@
         b,
         v,
         _ = l("div", {
-            id: "crmGUI",
+            id: "VoidGUI",
             style: {
                 top: Math.max(10, window.innerHeight - 600) / 2 + "px",
                 left: Math.max(10, window.innerWidth - 1e3) / 2 + "px",
@@ -283,7 +283,7 @@
                 display: "flex",
                 flexDirection: "column"
             },
-            innerHTML: '<span style="text-shadow: 1px 1px rgb(0 0 0 / 40%); font-size: 0.8em;">crm´s Cheats</sup></span>'
+            innerHTML: '<span style="text-shadow: 1px 1px rgb(0 0 0 / 40%); font-size: 0.8em;">Void Cheats</sup></span>'
         }, l("a", {
             className: "bigButton",
             style: {
@@ -389,7 +389,7 @@
                 borderRadius: "5px"
             }
         })))))));
-    for (let f of document.querySelectorAll("#crmGUI"))
+    for (let f of document.querySelectorAll("#VoidGUI"))
         f.remove();
 
     function w(e, t, a, o) {
