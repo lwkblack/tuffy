@@ -8,7 +8,7 @@ my color and bg settings on the GUI
     "infoColor": "",
     "defaultButton": "none",
     "enabledButton": "green",
-    "disabledButton": "rred",
+    "disabledButton": "red",
     "textColor": "red",
     "inputColor": "white",
     "contentBackground": "none"
